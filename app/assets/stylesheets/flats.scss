@@ -1,0 +1,43 @@
+body {
+  background-color: white;
+}
+
+
+.box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #AEADAE;
+  position: relative;
+  margin: 5px;
+  height: 50vh;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+}
+
+.card-background {
+  background-size: cover;
+}
+
+.card-description {
+  padding: 10px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-footer {
+  height: 7vh;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}

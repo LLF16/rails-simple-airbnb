@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1>Flats</h1>
+  <h4>We have found <strong><%= Flat.count %> flats</strong> that match you criteria</h4>
+  <div class="box">
+    <% @flats.each do |flat| %>
+    <div class="card">
+      <div class="card-background">
+        <img src="https://picsum.photos/g/300/200" alt="flat picture">
+      </div>
+      <div class="card-description">
+        <h4><%= link_to flat.name, flat_path(flat) %></h4>
+        <p><%= flat.address %></p>
+        <div class="details">
+          <p><i class="medium material-icons">attach_money</i><%= flat.price_per_night %></p>
+          <p><i class="medium material-icons">airline_seat_individual_suite</i><%= flat.number_of_guests %></p>
+        </div>
+      </div>
+      <div class="card-footer">
+      <%= link_to 'More info', flat_path(flat) %>
+      <%= link_to 'Edit', edit_flat_path(flat) %>
+      <%= link_to 'Remove', flat_path(flat), method: :delete %>
+      </div>
+    </div>
+    <% end %>
+
+      <%= link_to 'Add a flat', new_flat_path  %>
+  </div>
